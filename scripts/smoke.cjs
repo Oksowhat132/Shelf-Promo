@@ -11,7 +11,7 @@ const fs=require('node:fs');
    window.testStreams=[];
    navigator.mediaDevices.getUserMedia=async()=>{
     const canvas=document.createElement('canvas');canvas.width=960;canvas.height=1280;
-    const ctx=canvas.getContext('2d'),img=new Image(),qr=new Image();img.src='/target.png';qr.src='/phone-qr.png';await Promise.all([img.decode(),qr.decode()]);
+    const ctx=canvas.getContext('2d'),img=new Image(),qr=new Image();img.src='/smash-plus.jpg';qr.src='/phone-qr.png';await Promise.all([img.decode(),qr.decode()]);
     window.testTargetVisible=true;
     const draw=()=>{ctx.fillStyle='#ddd';ctx.fillRect(0,0,960,1280);if(window.testTargetVisible){ctx.drawImage(img,120,280,715,700);ctx.fillStyle='white';ctx.fillRect(639,297,178,197);ctx.drawImage(qr,645,303,166,166);}};
     draw();const timer=setInterval(draw,33);const stream=canvas.captureStream(30);window.testStreams.push(stream);

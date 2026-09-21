@@ -7,7 +7,6 @@ const fs = require('node:fs');
   page.on('pageerror', e=>console.error(e));
   await page.goto('http://localhost:3000/compile.html');
   const result=await page.evaluate(()=>window.buildTarget());
-  fs.writeFileSync('public/target.png',Buffer.from(result.png,'base64'));
   fs.writeFileSync('public/target.mind',Buffer.from(result.mind));
   console.log('Target compiled:',result.mind.length,'bytes');
  } finally {await browser.close();}

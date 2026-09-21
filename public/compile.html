@@ -1,12 +1,14 @@
 <!doctype html><html><head><meta charset="utf-8"><title>Build target</title><script type="module" src="/vendor/mindar-image.prod.js"></script></head><body><p id="progress">Preparing target…</p><script>
 window.buildTarget = async () => {
- const image = new Image(); image.src='/product.jpeg'; await image.decode();
- const canvas=document.createElement('canvas'); canvas.width=715; canvas.height=700;
- canvas.getContext('2d').drawImage(image,95,345,715,700,0,0,715,700);
+ const image = new Image(); image.src='/smash-plus.jpg'; await image.decode();
+ const canvas=document.createElement('canvas');
+ const scale=Math.min(1,1024/Math.max(image.naturalWidth,image.naturalHeight));
+ canvas.width=Math.round(image.naturalWidth*scale);canvas.height=Math.round(image.naturalHeight*scale);
+ canvas.getContext('2d').drawImage(image,0,0,canvas.width,canvas.height);
  const target=new Image(); target.src=canvas.toDataURL('image/png'); await target.decode();
  const compiler=new window.MINDAR.IMAGE.Compiler();
  await compiler.compileImageTargets([target], p=>document.querySelector('#progress').textContent=Math.round(p)+'%');
  const data=await compiler.exportData();
- return {png:target.src.split(',')[1],mind:Array.from(new Uint8Array(data))};
+ return {mind:Array.from(new Uint8Array(data))};
 };
 </script></body></html>

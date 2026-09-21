@@ -1,4 +1,4 @@
-﻿# ShelfPromo
+# ShelfPromo
 
 **Turn product packaging into an interactive marketing experience.**
 
@@ -12,7 +12,7 @@ Use it for product demos, in-store marketing concepts, and brand presentations. 
 
 No setup needed. Open this README on your computer, scan the QR code below with your phone, and tap **Scan to discover**. Then point your phone at the same product image to watch the promo. Choose **View in 3D**, then **View in AR** to explore the product.
 
-[![Scan the QR code to open ShelfPromo, then point your phone at this product image.](docs/demo-scan.png)](https://shelfpromo-demo-721fe29f40e5.herokuapp.com/target.html)
+[![Scan the QR code to open ShelfPromo, then point your phone at this product image.](docs/demo-scan.jpg)](https://shelfpromo-demo-721fe29f40e5.herokuapp.com/target.html)
 
 [Open the phone experience](https://shelfpromo-demo-721fe29f40e5.herokuapp.com/) · [Open a larger image on your computer](https://shelfpromo-demo-721fe29f40e5.herokuapp.com/target.html)
 
@@ -59,8 +59,8 @@ Some code changes are needed:
 | Change | Where |
 | --- | --- |
 | Promo video | Replace `public/video/smash-promo.mp4`, keeping the filename. Portrait MP4 works best. |
-| Packaging image | Replace `public/product.jpeg` and adjust the image crop in `public/compile.html`. |
-| Tracking data | With the server running, run `npm.cmd run compile` to rebuild the target image and recognition data. Requires Google Chrome. |
+| Packaging image | Replace `public/smash-plus.jpg` with a clear, front-facing product image. |
+| Tracking data | With the server running, run `npm.cmd run compile` to rebuild the image recognition data. Requires Google Chrome. |
 | 3D product | Replace the sample coil code in `public/product-model.js` with your product model. |
 | Branding and product details | Edit `public/index.html`, `public/target.html`, and `public/style.css`. |
 
