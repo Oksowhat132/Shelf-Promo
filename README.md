@@ -8,6 +8,16 @@ ShelfPromo lets a shopper scan a product image with their phone, watch a promoti
 
 Use it for product demos, in-store marketing concepts, and brand presentations. This starter includes a SMASH mosquito-coil example. Other products need their own image, video, and 3D model; they are not recognized automatically.
 
+## Try the live demo
+
+No setup needed. Open this README on your computer, scan the QR code below with your phone, and tap **Scan to discover**. Then point your phone at the same product image to watch the promo. Choose **View in 3D**, then **View in AR** to explore the product.
+
+[![Scan the QR code to open ShelfPromo, then point your phone at this product image.](docs/demo-scan.png)](https://shelfpromo-demo-721fe29f40e5.herokuapp.com/target.html)
+
+[Open the phone experience](https://shelfpromo-demo-721fe29f40e5.herokuapp.com/) · [Open a larger image on your computer](https://shelfpromo-demo-721fe29f40e5.herokuapp.com/target.html)
+
+The hosted demo is separate from the local setup below. Cloning this project still gives you your own local app and temporary tunnel.
+
 ## Run it on your computer
 
 The included startup script is for **Windows**. Install [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/), then open PowerShell:
