@@ -1,0 +1,23 @@
+{
+  "name": "ar-product",
+  "version": "1.0.0",
+  "description": "Local image-tracked AR coil demo",
+  "private": true,
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs",
+    "phone": "node scripts/phone.cjs",
+    "compile": "node scripts/compile.cjs",
+    "test": "node scripts/smoke.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

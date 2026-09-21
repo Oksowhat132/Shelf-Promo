@@ -1,0 +1,6 @@
+node_modules/
+.tools/
+*.log
+public/phone.json
+public/phone-qr.png
+test-results/

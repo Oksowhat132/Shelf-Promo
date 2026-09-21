@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101310">
+  <title>SMASH plus · A moment outside</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/renderers/CSS3DRenderer.js":"/vendor/CSS3DRenderer.js"}}</script>
+</head>
+<body data-mode="home">
+  <div id="ar"></div>
+  <header><a class="brand" href="/" aria-label="SMASH plus home">SMASH <em>plus</em></a><button id="sound" class="quiet" aria-pressed="false">Enable sound</button></header>
+  <main id="intro">
+    <span class="eyebrow">A NEW WAY TO DISCOVER</span>
+    <h1>A moment<br><em>outside.</em></h1>
+    <p class="lead">Watch the story.<br>Then explore the product in 3D.</p>
+    <div class="product-frame"><img src="/target.png" alt="SMASH plus packaging to scan"></div>
+    <button id="start" class="primary">Scan to discover <span aria-hidden="true">↗</span></button>
+    <p class="small">Scan · Watch · Explore</p>
+    <a class="text-link" href="/target.html" target="_blank" rel="noopener">Need an image to scan?</a>
+  </main>
+  <section id="hud" hidden aria-label="Camera experience">
+    <div id="scan-guide" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="camera-bottom">
+      <div id="info" hidden><span class="eyebrow">SMASH PLUS</span><h2>Small details. All included.</h2><ul><li>Micro Smoke</li><li>10 coils per pack</li><li>Metallic support included</li></ul><p>For outdoor use. Follow the instructions on the pack.</p></div>
+      <div id="status" role="status" aria-live="polite">Find the SMASH artwork</div>
+      <p id="hint">Fit the artwork inside the frame.</p>
+      <div class="ar-actions"><button id="details" class="secondary" aria-expanded="false" aria-controls="info" hidden>Product info</button><button id="back-viewer" class="secondary" hidden>3D view</button><button id="stop" class="quiet">Close</button></div>
+    </div>
+  </section>
+  <section id="promo" hidden aria-label="SMASH portrait promo">
+    <div class="promo-screen">
+      <video id="promo-video" playsinline controls preload="none" aria-label="SMASH promotional video"></video>
+      <div id="promo-loader" role="status" aria-live="polite"><span class="loader-ring" aria-hidden="true"></span><h2 id="promo-message">Loading your promo…</h2><button id="promo-play" class="primary" hidden>Play with sound ▶</button><button id="promo-retry" class="secondary" hidden>Retry video</button></div>
+    </div>
+    <div class="promo-actions"><button id="promo-3d" class="primary">View in 3D <span aria-hidden="true">↗</span></button><div class="viewer-links"><button id="promo-replay" class="quiet" hidden>Watch again</button><button id="promo-close" class="quiet">Close</button></div></div>
+  </section>
+  <section id="cinema" hidden aria-label="SMASH product reveal">
+    <div class="cinema-top"><span class="eyebrow">SMASH PLUS / DISCOVER</span><button id="skip" class="quiet">Skip ↗</button></div>
+    <div id="film-copy" aria-live="polite"><span id="film-kicker" class="eyebrow"></span><h2 id="film-title"></h2><p id="film-subtitle"></p></div>
+    <div id="viewer-heading" hidden><span class="eyebrow">MEET SMASH PLUS</span><h2>A new perspective.</h2></div>
+    <div id="viewer" tabindex="0" role="img" aria-label="Interactive 3D mosquito coil. Drag or use arrow keys to rotate." hidden></div>
+    <div id="viewer-controls" hidden><p class="drag-hint">Drag to explore</p><button id="rotation" class="text-link" aria-pressed="true">Pause rotation</button><button id="see-ar" class="primary">View in AR <span aria-hidden="true">↗</span></button><div class="viewer-links"><button id="replay" class="quiet">Replay</button><button id="exit-film" class="quiet">Close</button></div><p class="small">Image-tracked AR · Point at the packaging</p></div>
+    <div id="film-footer"><span>ONE PRODUCT. A CLOSER LOOK.</span><progress id="film-progress" max="1" value="0" aria-label="Intro progress"></progress></div>
+  </section>
+  <div id="error" role="alert" hidden></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
